@@ -20,7 +20,7 @@ public class UserModel {
     private String address;
     private String kecamatan;
     private String kelurahan;
-    private int roleId;
+    private int roleId; 
 
     /**
      * @return the id

@@ -116,5 +116,50 @@ public class KaryawanDaoImpl implements KaryawanDao {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public int update(KaryawanModel karyawan) {
+        int result = 0;
+        try {
+            // Query untuk mengupdate data karyawan
+            query = "UPDATE karyawan SET nama = ?, usia = ?, kontak = ?, email = ?, alamat = ?, gender = ? WHERE id_karyawan = ?";
+
+            pstmt = dbConnection.prepareStatement(query);
+            pstmt.setString(1, karyawan.getName());  // Nama karyawan
+            pstmt.setInt(2, karyawan.getUsia());  // Usia karyawan
+            pstmt.setString(3, karyawan.getKontak());  // Kontak karyawan
+            pstmt.setString(4, karyawan.getEmail());  // Email karyawan
+            pstmt.setString(5, karyawan.getAlamat());  // Alamat karyawan
+            pstmt.setString(6, karyawan.getGender());  // Gender karyawan
+            pstmt.setInt(7, karyawan.getId());  // ID karyawan yang akan diupdate
+
+            result = pstmt.executeUpdate();  // Eksekusi query update
+        } catch (SQLException e) {
+            // Jika ada error, lempar exception
+            e.printStackTrace();
+        } finally {
+            closeStatement();  // Pastikan koneksi ditutup
+        }
+
+        return result;  // Kembalikan jumlah baris yang terupdate
+    }
+
+    @Override
+    public int deleteKaryawan(int id) {
+        int result = 0;
+        try {
+            query = "DELETE FROM karyawan WHERE id_karyawan = ?";
+            pstmt = dbConnection.prepareStatement(query);
+            pstmt.setInt(1, id);
+
+            result = pstmt.executeUpdate(); // eksekusi dan simpan jumlah baris yang terhapus
+        } catch (SQLException e) {
+            e.printStackTrace(); // log error
+        } finally {
+            closeStatement(); // tutup statement
+        }
+
+        return result; // return jumlah baris yang terhapus
+    }
     
 }

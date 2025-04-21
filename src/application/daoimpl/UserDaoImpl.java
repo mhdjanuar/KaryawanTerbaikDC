@@ -100,13 +100,8 @@ public class UserDaoImpl implements UserDao {
             while (resultSet.next()) {
                 UserModel user = new UserModel();
                 user.setId(resultSet.getInt("id"));
-                user.setName(resultSet.getString("name"));
+                user.setName(resultSet.getString("username"));
                 user.setEmail(resultSet.getString("email"));
-                user.setPhone(resultSet.getString("phone"));
-                user.setAddress(resultSet.getString("address"));
-                user.setKecamatan(resultSet.getString("kecamatan"));
-                user.setKelurahan(resultSet.getString("kelurahan"));
-                user.setRoleId(resultSet.getInt("role_id"));
 
                 userList.add(user);
             }
@@ -121,42 +116,63 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int create(UserModel user) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        int result = 0;
+        String query = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 
-    @Override
-    public int update(UserModel user) {
-        String query = "UPDATE users SET name = ?, email = ?, phone = ?, address = ?, kecamatan = ?, kelurahan = ?, role_id = ? WHERE id = ?";
         try {
             pstmt = dbConnection.prepareStatement(query);
             pstmt.setString(1, user.getName());
             pstmt.setString(2, user.getEmail());
-            pstmt.setString(3, user.getPhone());
-            pstmt.setString(4, user.getAddress());
-            pstmt.setString(5, user.getKecamatan());
-            pstmt.setString(6, user.getKelurahan());
-            pstmt.setInt(7, user.getRoleId());
-            pstmt.setInt(8, user.getId());
+            pstmt.setString(3, "Password1!"); // password default (hardcode)
 
-            int affectedRows = pstmt.executeUpdate();
-
-            if (affectedRows == 0) {
-                throw new RuntimeException("Gagal memperbarui user, tidak ada baris yang terpengaruh.");
-            }
-
-            return affectedRows; // Mengembalikan jumlah baris yang diperbarui
-
+            result = pstmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error saat memperbarui user: " + e.getMessage(), e);
+            throw new RuntimeException("Gagal menyimpan user: " + e.getMessage(), e);
+        } finally {
+            closeStatement();
+        }
+
+        return result;
+    }
+
+    @Override
+    public int update(UserModel user) {
+        int result = 0;
+        String query = "UPDATE users SET username = ?, email = ? WHERE id = ?";
+
+        try {
+            pstmt = dbConnection.prepareStatement(query);
+            pstmt.setString(1, user.getName());
+            pstmt.setString(2, user.getEmail());
+            pstmt.setInt(3, user.getId());
+
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Gagal mengupdate user: " + e.getMessage(), e);
+        } finally {
+            closeStatement();
+        }
+
+        return result;
+    }
+
+
+    @Override
+    public boolean delete(int id) {
+        String query = "DELETE FROM users WHERE id = ?";
+        try {
+            pstmt = dbConnection.prepareStatement(query);
+            pstmt.setInt(1, id);
+            int rows = pstmt.executeUpdate();
+            return rows > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         } finally {
             closeStatement();
         }
     }
 
-    @Override
-    public void delete(UserModel user) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     private void closeStatement() {
         try {

@@ -26,7 +26,7 @@ public interface UserDao {
     
     public int update(UserModel user);
     
-    public void delete(UserModel user);
+    public boolean delete(int id);
     
     public void upsert(UserModel user);
     

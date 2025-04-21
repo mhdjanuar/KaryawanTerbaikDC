@@ -367,7 +367,7 @@ public class ProfilView extends javax.swing.JPanel {
             Pane.revalidate();
 
             // add Panel, add panel
-            Pane.add(new AkunView(userAuth, Pane));
+//            Pane.add(new AkunView(userAuth, Pane));
             Pane.repaint();
             Pane.revalidate();   
         } else {

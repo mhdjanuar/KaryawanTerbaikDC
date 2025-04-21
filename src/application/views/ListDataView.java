@@ -23,6 +23,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.InputStream;
+import static java.lang.Integer.parseInt;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
@@ -54,6 +55,7 @@ import net.sf.jasperreports.view.JasperViewer;
      */
     public class ListDataView extends javax.swing.JPanel {
         public final KaryawanDao karyawanDao;
+        public String selectedId;
 
         public void getAllData() {
             // Ambil data karyawan dari database
@@ -92,6 +94,40 @@ import net.sf.jasperreports.view.JasperViewer;
         initComponents();
         
         getAllData();
+        
+        // Tambahkan event listener pada JTable
+        jTable1.getSelectionModel().addListSelectionListener(e -> {
+            // Cegah event dua kali saat update
+            if (!e.getValueIsAdjusting() && jTable1.getSelectedRow() != -1) {
+                int selectedRow = jTable1.getSelectedRow();
+
+                // Ambil data dari baris yang diklik
+                String nama = jTable1.getValueAt(selectedRow, 1).toString();
+                String usia = jTable1.getValueAt(selectedRow, 2).toString();
+                String kontak = jTable1.getValueAt(selectedRow, 3).toString();
+                String email = jTable1.getValueAt(selectedRow, 4).toString();
+                String alamat = jTable1.getValueAt(selectedRow, 5).toString();
+//                String genderValue = jTable1.getValueAt(selectedRow, 6).toString();
+                
+                this.selectedId = jTable1.getValueAt(selectedRow, 0).toString();
+
+                // Tampilkan ke form
+                txtNama.setText(nama);
+                txtUsia.setText(usia);
+                txtContact.setText(kontak);
+                txtEmail.setText(email);
+                txtAddress.setText(alamat);
+//                this.selectedId = (int) jTable1.getValueAt(selectedRow, 0).toString();
+
+                // Pilih radio button sesuai gender
+//                if ("Laki-laki".equalsIgnoreCase(genderValue) || "Laki Laki".equalsIgnoreCase(genderValue)) {
+//                    male.setSelected(true);
+//                } else if ("Perempuan".equalsIgnoreCase(genderValue)) {
+//                    female.setSelected(true);
+//                }
+            }
+        });
+
     }
     
     public void clearForm() {
@@ -137,6 +173,8 @@ import net.sf.jasperreports.view.JasperViewer;
         txtAddress = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -177,17 +215,31 @@ import net.sf.jasperreports.view.JasperViewer;
 
         jLabel6.setText("Alamat");
 
-        jButton1.setText("Simpan");
+        jButton1.setText("SIMPAN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Clear");
+        jButton2.setText("CLEAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("UBAH");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("HAPUS");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -200,8 +252,12 @@ import net.sf.jasperreports.view.JasperViewer;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -223,7 +279,7 @@ import net.sf.jasperreports.view.JasperViewer;
                                 .addComponent(female))
                             .addComponent(jLabel6)
                             .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,7 +321,9 @@ import net.sf.jasperreports.view.JasperViewer;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18))
         );
 
@@ -396,12 +454,76 @@ import net.sf.jasperreports.view.JasperViewer;
          }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         // Ambil nilai input dari form
+        String nama = txtNama.getText().trim();
+        String usiaText = txtUsia.getText().trim();
+        String kontak = txtContact.getText().trim();
+        String email = txtEmail.getText().trim();
+        String alamat = txtAddress.getText().trim();
+
+        // Validasi gender
+        ButtonModel selectedGender = gender.getSelection();
+        String gender = "";
+        if(male.isSelected()) {
+            gender = "Laki-laki";
+        } else {
+            gender = "Perempuan";
+        }
+
+        // Validasi usia angka
+        int usia = 0;
+        try {
+            usia = Integer.parseInt(usiaText);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Usia harus berupa angka.");
+            return;
+        }
+
+        // Set ke model
+        KaryawanModel karyawan = new KaryawanModel();
+        karyawan.setId(parseInt(this.selectedId)); // ID Karyawan yang akan diupdate
+        karyawan.setName(nama);
+        karyawan.setUsia(usia);
+        karyawan.setKontak(kontak);
+        karyawan.setEmail(email);
+        karyawan.setAlamat(alamat);
+        karyawan.setGender(gender);
+
+        // Panggil fungsi update di DAO
+        int result = karyawanDao.update(karyawan);
+        if (result > 0) {
+            JOptionPane.showMessageDialog(this, "Data karyawan berhasil diperbarui.");
+            getAllData();  // Refresh data yang ada di tabel
+            clearForm();
+        } else {
+            JOptionPane.showMessageDialog(this, "Gagal memperbarui data karyawan.");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int konfirmasi = JOptionPane.showConfirmDialog(null, "Yakin ingin menghapus data ini?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+        if (konfirmasi == JOptionPane.YES_OPTION) {
+      
+            int success = karyawanDao.deleteKaryawan(parseInt(this.selectedId));
+            if (success > 0) {
+                JOptionPane.showMessageDialog(null, "Data berhasil dihapus.");
+                getAllData(); // reload data tabel
+                clearForm();
+            } else {
+                JOptionPane.showMessageDialog(null, "Gagal menghapus data.");
+            }
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton female;
     private javax.swing.ButtonGroup gender;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
