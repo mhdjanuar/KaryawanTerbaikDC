@@ -399,7 +399,7 @@ public class MenuView extends javax.swing.JFrame {
         MainContent.revalidate();
 
         // add Panel, add panel
-        MainContent.add(new ListDataView());
+        MainContent.add(new Karyawan());
         MainContent.repaint();
         MainContent.revalidate();
     }//GEN-LAST:event_listDataMouseClicked

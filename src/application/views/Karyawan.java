@@ -5,11 +5,8 @@
 package application.views;
 
 import application.dao.KaryawanDao;
-import application.dao.ListDataDao;
 import application.daoimpl.KaryawanDaoImpl;
-import application.daoimpl.ListDataDaoImpl;
 import application.models.KaryawanModel;
-import application.models.ListDataModel;
 import application.models.UserModel;
 import application.utils.DatabaseUtil;
 import java.awt.BorderLayout;
@@ -53,7 +50,7 @@ import net.sf.jasperreports.view.JasperViewer;
      *
      * @author mhdja
      */
-    public class ListDataView extends javax.swing.JPanel {
+    public class Karyawan extends javax.swing.JPanel {
         public final KaryawanDao karyawanDao;
         public String selectedId;
 
@@ -88,7 +85,7 @@ import net.sf.jasperreports.view.JasperViewer;
     /**
      * Creates new form ListDataView
      */
-    public ListDataView() {
+    public Karyawan() {
         this.karyawanDao = new KaryawanDaoImpl();
         
         initComponents();

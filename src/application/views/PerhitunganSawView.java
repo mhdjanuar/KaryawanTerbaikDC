@@ -6,14 +6,10 @@ package application.views;
 
 import application.dao.KandidatDao;
 import application.dao.KaryawanDao;
-import application.dao.PerhitunganDao;
 import application.daoimpl.KandidatDaoImpl;
 import application.daoimpl.KaryawanDaoImpl;
-import application.daoimpl.PerhitunganDaoImpl;
 import application.models.KandidatModel;
 import application.models.KaryawanModel;
-import application.models.PresentaseModel;
-import application.models.RangkingModel;
 import application.utils.DatabaseUtil;
 import java.io.InputStream;
 import java.sql.Connection;

@@ -6,7 +6,6 @@ package application.daoimpl;
 
 import application.dao.KaryawanDao;
 import application.models.KaryawanModel;
-import application.models.ListDataModel;
 import application.utils.DatabaseUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
