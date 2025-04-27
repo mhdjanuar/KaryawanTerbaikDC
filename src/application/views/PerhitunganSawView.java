@@ -110,7 +110,7 @@ public class PerhitunganSawView extends javax.swing.JPanel {
         getKaryawanComboBox();
         getAllData();
         
-        List<String> label = Arrays.asList("Sangat Baik", "Cukup Baik", "Kurang baik");
+        List<String> label = Arrays.asList("Sangat Baik", "Cukup Baik", "Kurang Baik");
         
         populateComboBox(productivityComboBox, label);
         populateComboBox(qualityBox, label);        
