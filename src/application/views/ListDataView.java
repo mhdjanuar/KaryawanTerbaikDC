@@ -64,7 +64,7 @@ import net.sf.jasperreports.view.JasperViewer;
             // Set Model untuk JTable
             DefaultTableModel model = new DefaultTableModel();
             model.setColumnIdentifiers(new Object[]{
-                "ID Karyawan", "Nama", "Usia", "Kontak", "Email", "Alamat", "Gender"
+                "ID Karyawan", "Nama", "Usia", "Kontak", "Email", "Alamat", "Jenkel"
             });
 
             // Masukkan data karyawan ke dalam model JTable

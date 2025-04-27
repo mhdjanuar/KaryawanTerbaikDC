@@ -77,23 +77,21 @@
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jButton6" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="improvmentBox" min="-2" pref="171" max="-2" attributes="0"/>
-                                  <Component id="absensiBox" min="-2" pref="171" max="-2" attributes="0"/>
-                                  <Component id="psikotesBox" min="-2" pref="171" max="-2" attributes="0"/>
-                              </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jButton1" max="32767" attributes="0"/>
-                          <Component id="jButton5" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="improvmentBox" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Component id="absensiBox" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Component id="psikotesBox" min="-2" pref="171" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="jButton5" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -228,7 +226,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Improvment"/>
+            <Property name="text" type="java.lang.String" value="Improvement"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
@@ -307,7 +305,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Data karyawan"/>
+            <Property name="text" type="java.lang.String" value="Data Karyawan"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>

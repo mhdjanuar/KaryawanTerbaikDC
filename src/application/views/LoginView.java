@@ -43,7 +43,7 @@ public class LoginView extends javax.swing.JFrame {
     
     public void start(){
         JFrame frame = new LoginView();
-        frame.setTitle("Login Frame");
+        frame.setTitle("Login");
 //        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.setLocationRelativeTo(null);
@@ -84,6 +84,7 @@ public class LoginView extends javax.swing.JFrame {
         textFieldPassword = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,8 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1.setText("Email");
 
         jLabel2.setText("Password");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/logo-citra-no-bg.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,11 +125,17 @@ public class LoginView extends javax.swing.JFrame {
                             .addComponent(textFieldPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                             .addComponent(textFieldUsername))))
                 .addGap(0, 131, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(191, 191, 191))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textFieldUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -136,7 +145,7 @@ public class LoginView extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(buttonLogin)
-                .addGap(127, 127, 127))
+                .addGap(79, 79, 79))
         );
 
         pack();
@@ -210,6 +219,7 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JButton buttonLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField textFieldPassword;
     private javax.swing.JTextField textFieldUsername;
     // End of variables declaration//GEN-END:variables

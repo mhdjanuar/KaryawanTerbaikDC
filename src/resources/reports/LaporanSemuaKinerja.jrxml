@@ -151,25 +151,25 @@ ORDER BY total_skor DESC;]]>
 	<pageHeader>
 		<band height="80" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#080808" uuid="3f07f90b-49b6-4be5-a5c4-03b97bda0720"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#080808" uuid="77014e8d-5528-4307-a379-36974d02cfc9"/>
 				<staticText>
-					<reportElement x="190" y="10" width="209" height="30" forecolor="#FCFAFA" uuid="26e84a58-7725-4e11-b591-d1196c8889aa"/>
+					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="f6aef23c-c508-4112-9480-896a6152cbaf"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[COSMAX]]></text>
+					<text><![CDATA[CITRA MULTI SERVICES]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="190" y="40" width="221" height="20" forecolor="#FFFAFA" uuid="4fc72fd1-190f-41ee-b568-77fc91ba7ce4"/>
+					<reportElement x="190" y="40" width="221" height="20" forecolor="#FFFAFA" uuid="e2b48ac1-dd1e-4032-af52-f0d2a4e275ff"/>
 					<textElement>
 						<font fontName="Times New Roman"/>
 					</textElement>
-					<text><![CDATA[Jl. Gotong Royong No.60, RT01/001 Cilandak]]></text>
+					<text><![CDATA[ Jl. Prof. DR. Soepomo No.143, RT.13/RW.2]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="210" y="60" width="170" height="20" forecolor="#FCFAFA" uuid="ac8bf708-13b6-4e3d-8f79-f1f5051bcf43"/>
-					<text><![CDATA[Kec Cilandak, Kota Jakarta Selatan]]></text>
+					<reportElement x="210" y="60" width="170" height="20" forecolor="#FCFAFA" uuid="73efee81-b0c6-4279-afa8-0add649fd50e"/>
+					<text><![CDATA[Kec. Tebet, Kota Jakarta Selatan]]></text>
 				</staticText>
 				<image>
 					<reportElement x="40" y="25" width="50" height="50" uuid="23d5bb3f-e081-4190-9f1d-1a95495589ee"/>
@@ -192,7 +192,7 @@ ORDER BY total_skor DESC;]]>
 	<detail>
 		<band height="288" splitType="Stretch">
 			<componentElement>
-				<reportElement x="-16" y="10" width="586" height="200" uuid="e0b223c6-df3c-404a-a59d-26ccd6aaea97">
+				<reportElement x="-20" y="10" width="598" height="200" uuid="e0b223c6-df3c-404a-a59d-26ccd6aaea97">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
 					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
@@ -203,11 +203,11 @@ ORDER BY total_skor DESC;]]>
 					<datasetRun subDataset="Karyawan" uuid="59391a25-ff48-4839-9ca2-3ee6c7993614">
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 					</datasetRun>
-					<jr:column width="75" uuid="ecf001d1-fd2d-4781-9a28-62a6c60df529">
+					<jr:column width="78" uuid="ecf001d1-fd2d-4781-9a28-62a6c60df529">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
 						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="75" height="30" uuid="dbbdf116-2bf9-4720-806b-c421679e51fa">
+								<reportElement x="0" y="0" width="78" height="30" uuid="dbbdf116-2bf9-4720-806b-c421679e51fa">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -219,7 +219,7 @@ ORDER BY total_skor DESC;]]>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="75" height="30" uuid="2793620c-1865-47a5-8f65-7a45d48d689c">
+								<reportElement x="0" y="0" width="78" height="30" uuid="2793620c-1865-47a5-8f65-7a45d48d689c">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -230,11 +230,11 @@ ORDER BY total_skor DESC;]]>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="75" uuid="2c163129-b46c-4ebd-994f-e6948a6ea824">
+					<jr:column width="78" uuid="2c163129-b46c-4ebd-994f-e6948a6ea824">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
 						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="75" height="30" uuid="2f25893f-19ab-42d7-8f26-16f8836b43fb">
+								<reportElement x="0" y="0" width="78" height="30" uuid="2f25893f-19ab-42d7-8f26-16f8836b43fb">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -246,7 +246,7 @@ ORDER BY total_skor DESC;]]>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="75" height="30" uuid="943e6508-a2ad-4658-987d-32fac6c39b63">
+								<reportElement x="0" y="0" width="78" height="30" uuid="943e6508-a2ad-4658-987d-32fac6c39b63">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -257,11 +257,11 @@ ORDER BY total_skor DESC;]]>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="75" uuid="e1d61136-1618-42e7-8329-bcd71a233261">
+					<jr:column width="78" uuid="e1d61136-1618-42e7-8329-bcd71a233261">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
 						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="75" height="30" uuid="60dc6f7e-5c3e-4000-8589-78314bc4e927">
+								<reportElement x="0" y="0" width="78" height="30" uuid="60dc6f7e-5c3e-4000-8589-78314bc4e927">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -273,7 +273,7 @@ ORDER BY total_skor DESC;]]>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="75" height="30" uuid="e6a19d4f-ce79-4f8b-ba41-24e7d93a0b22">
+								<reportElement x="0" y="0" width="78" height="30" uuid="e6a19d4f-ce79-4f8b-ba41-24e7d93a0b22">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -284,23 +284,23 @@ ORDER BY total_skor DESC;]]>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="73" uuid="67a93e2a-f06b-4ebe-9806-8320d43893dc">
+					<jr:column width="75" uuid="67a93e2a-f06b-4ebe-9806-8320d43893dc">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
 						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="73" height="30" uuid="fa00d08a-557e-4293-8829-0914b0745780">
+								<reportElement x="0" y="0" width="75" height="30" uuid="fa00d08a-557e-4293-8829-0914b0745780">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[TANGGUNG JAWAB]]></text>
+								<text><![CDATA[T.JAWAB]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="73" height="30" uuid="04b1cf68-7355-45d0-9793-4a0b420417cf">
+								<reportElement x="0" y="0" width="75" height="30" uuid="04b1cf68-7355-45d0-9793-4a0b420417cf">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -311,23 +311,23 @@ ORDER BY total_skor DESC;]]>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="72" uuid="15b6d6ba-7a3e-4302-b02e-4b0213871cbf">
+					<jr:column width="73" uuid="15b6d6ba-7a3e-4302-b02e-4b0213871cbf">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
 						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
 							<staticText>
-								<reportElement x="0" y="0" width="72" height="30" uuid="8438ae5f-bd7f-46fe-ad6b-dede8d1593c4">
+								<reportElement x="0" y="0" width="73" height="30" uuid="8438ae5f-bd7f-46fe-ad6b-dede8d1593c4">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[IMPROVMENT]]></text>
+								<text><![CDATA[IMPROVEMENT]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="72" height="30" uuid="c486e9e0-542e-4855-9ceb-44f41f150a03">
+								<reportElement x="0" y="0" width="73" height="30" uuid="c486e9e0-542e-4855-9ceb-44f41f150a03">
 									<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								</reportElement>
@@ -376,7 +376,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[PSIKOTES]]></text>
+								<text><![CDATA[PSIKOTEST]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -427,33 +427,33 @@ ORDER BY total_skor DESC;]]>
 	<pageFooter>
 		<band height="154" splitType="Stretch">
 			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="-20" y="20" width="594" height="19" uuid="1580bd6a-5ad2-4f42-abcc-09436fed1673">
+				<reportElement x="-20" y="20" width="594" height="19" uuid="945598b3-c719-4291-a3e6-e14a7a64ab6d">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<paragraph rightIndent="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Bekasi, " + new java.text.SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Jakarta, " + new java.text.SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-18" y="50" width="596" height="19" uuid="0873545a-7090-4ca3-892c-09d4a3f30d54">
+				<reportElement x="-18" y="50" width="588" height="19" uuid="be1a5404-1682-4a8a-819e-3c09dd366953">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<font isBold="true"/>
 					<paragraph rightIndent="40"/>
 				</textElement>
-				<text><![CDATA[Pemilik]]></text>
+				<text><![CDATA[HRD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-17" y="130" width="595" height="24" uuid="95401f5c-10ca-4306-8615-d98773dc1af9">
+				<reportElement x="-17" y="130" width="577" height="24" uuid="b591c10d-dddf-4c8a-bf83-60b1c1c3cfd4">
 					<property name="com.jaspersoft.studio.unit.spacingBefore" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<paragraph rightIndent="10"/>
 				</textElement>
-				<text><![CDATA[Rafly Muchtar M.Kom]]></text>
+				<text><![CDATA[Arya Anindita]]></text>
 			</staticText>
 		</band>
 	</pageFooter>

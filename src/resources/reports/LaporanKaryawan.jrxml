@@ -34,7 +34,7 @@
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
 		<queryString language="SQL">
-			<![CDATA[select * from  decision_tree_karyawan.karyawan ]]>
+			<![CDATA[select * from  decision_tree_karyawan.karyawan]]>
 		</queryString>
 		<field name="id_karyawan" class="java.math.BigInteger">
 			<property name="com.jaspersoft.studio.field.name" value="id_karyawan"/>
@@ -122,25 +122,25 @@
 	<pageHeader>
 		<band height="80" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#080808" uuid="5ba00224-82d2-4f33-8b49-ed70176f933e"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="100" forecolor="#FFFCFC" backcolor="#080808" uuid="77ea51b9-37c8-4b42-877a-8942c3c537fb"/>
 				<staticText>
-					<reportElement x="190" y="10" width="209" height="30" forecolor="#FCFAFA" uuid="30772ed4-f93b-476b-9dc7-aa77b1dd484f"/>
+					<reportElement x="110" y="10" width="350" height="30" forecolor="#FCFAFA" uuid="d553b7ac-ba2b-47be-b765-ed1b7fd517be"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="20" isBold="true"/>
 						<paragraph lineSpacingSize="1.0"/>
 					</textElement>
-					<text><![CDATA[COSMAX]]></text>
+					<text><![CDATA[CITRA MULTI SERVICES]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="190" y="40" width="221" height="20" forecolor="#FFFAFA" uuid="f4c57dae-d925-4415-88c1-1c34d27546fa"/>
+					<reportElement x="190" y="40" width="221" height="20" forecolor="#FFFAFA" uuid="4b1d2b5f-d914-4f6a-bbbc-afc6d333c9cd"/>
 					<textElement>
 						<font fontName="Times New Roman"/>
 					</textElement>
-					<text><![CDATA[Jl. Gotong Royong No.60, RT01/001 Cilandak]]></text>
+					<text><![CDATA[ Jl. Prof. DR. Soepomo No.143, RT.13/RW.2]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="210" y="60" width="170" height="20" forecolor="#FCFAFA" uuid="04c12bfe-de5f-417b-a446-484c60e7f555"/>
-					<text><![CDATA[Kec Cilandak, Kota Jakarta Selatan]]></text>
+					<reportElement x="210" y="60" width="170" height="20" forecolor="#FCFAFA" uuid="fc298676-1a56-4ec3-ba8a-abfa184eee3c"/>
+					<text><![CDATA[Kec. Tebet, Kota Jakarta Selatan]]></text>
 				</staticText>
 				<image>
 					<reportElement x="40" y="25" width="50" height="50" uuid="23d5bb3f-e081-4190-9f1d-1a95495589ee"/>
@@ -184,7 +184,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[id_karyawan]]></text>
+								<text><![CDATA[ID Karyawan]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -210,7 +210,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[nama]]></text>
+								<text><![CDATA[Nama]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -236,7 +236,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[usia]]></text>
+								<text><![CDATA[Usia]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -262,7 +262,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[kontak]]></text>
+								<text><![CDATA[Kontak]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -288,7 +288,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[email]]></text>
+								<text><![CDATA[Email]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -314,7 +314,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[gender]]></text>
+								<text><![CDATA[Jenkel]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -340,7 +340,7 @@
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[alamat]]></text>
+								<text><![CDATA[Alamat]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -362,35 +362,35 @@
 	</detail>
 	<pageFooter>
 		<band height="154" splitType="Stretch">
-			<staticText>
-				<reportElement x="-17" y="130" width="595" height="24" uuid="e7694a8b-534a-4e14-9cf6-f6a1118034fa">
-					<property name="com.jaspersoft.studio.unit.spacingBefore" value="pixel"/>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-20" y="20" width="594" height="19" uuid="33d094a3-77c9-405e-9d40-686657cb3783">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<paragraph rightIndent="10"/>
 				</textElement>
-				<text><![CDATA[Rafly Muchtar M.Kom]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA["Jakarta, " + new java.text.SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="-18" y="50" width="596" height="19" uuid="4d960147-6d95-4b1c-a0d1-c4b076705a31">
+				<reportElement x="-18" y="50" width="588" height="19" uuid="c250db17-debe-4ea1-b82d-080b66c32f1e">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<font isBold="true"/>
 					<paragraph rightIndent="40"/>
 				</textElement>
-				<text><![CDATA[Pemilik]]></text>
+				<text><![CDATA[HRD]]></text>
 			</staticText>
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="-20" y="20" width="594" height="19" uuid="e3b42558-96d6-4c1f-b3e5-5c0af7f6bac9">
+			<staticText>
+				<reportElement x="-17" y="130" width="577" height="24" uuid="2f1a3d11-df41-4f6d-8ee6-299da48ccaee">
+					<property name="com.jaspersoft.studio.unit.spacingBefore" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<paragraph rightIndent="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Bekasi, " + new java.text.SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
-			</textField>
+				<text><![CDATA[Arya Anindita]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 </jasperReport>

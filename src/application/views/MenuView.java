@@ -185,7 +185,7 @@ public class MenuView extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("KELUAR");
+        jLabel3.setText("              KELUAR");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -257,7 +257,7 @@ public class MenuView extends javax.swing.JFrame {
                 .addContainerGap())
             .addComponent(profil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(SidebarLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(75, 75, 75)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
