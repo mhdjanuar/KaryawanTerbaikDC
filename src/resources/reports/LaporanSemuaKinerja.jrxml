@@ -192,7 +192,7 @@ ORDER BY total_skor DESC;]]>
 	<detail>
 		<band height="288" splitType="Stretch">
 			<componentElement>
-				<reportElement x="-20" y="10" width="598" height="200" uuid="e0b223c6-df3c-404a-a59d-26ccd6aaea97">
+				<reportElement x="-22" y="0" width="598" height="200" uuid="e0b223c6-df3c-404a-a59d-26ccd6aaea97">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
 					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
@@ -214,7 +214,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[NAMA]]></text>
+								<text><![CDATA[Nama]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -241,7 +241,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[PRODUCTIVITY]]></text>
+								<text><![CDATA[Productivity]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -268,7 +268,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[QUALITY]]></text>
+								<text><![CDATA[Quality]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -295,7 +295,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[T.JAWAB]]></text>
+								<text><![CDATA[T.Jawab]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -322,7 +322,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[IMPROVEMENT]]></text>
+								<text><![CDATA[Improvement]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -349,7 +349,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[ABSENSI]]></text>
+								<text><![CDATA[Absensi]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -376,7 +376,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[PSIKOTEST]]></text>
+								<text><![CDATA[Psikotest]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -404,7 +404,7 @@ ORDER BY total_skor DESC;]]>
 								<textElement textAlignment="Center">
 									<paragraph spacingBefore="10" spacingAfter="10"/>
 								</textElement>
-								<text><![CDATA[HASIL]]></text>
+								<text><![CDATA[Hasil]]></text>
 							</staticText>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
